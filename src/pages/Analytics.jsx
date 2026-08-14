@@ -204,15 +204,11 @@ function Analytics() {
                     <div className="panel-header">
 
                         <div>
-                            <h2>Today's Progress</h2>
-                            <p>
-                                {todayCompleted} of{" "}
-                                {todayTotal} tasks completed
-                            </p>
+                            <h2>Total Progress Bar</h2>
                         </div>
 
                         <strong>
-                            {todayProductivity}%
+                            {overallProductivity}%
                         </strong>
 
                     </div>
@@ -222,7 +218,7 @@ function Analytics() {
                         <div
                             className="analytics-progress-fill"
                             style={{
-                                width: `${todayProductivity}%`,
+                                width: `${overallProductivity}%`,
                             }}
                         />
 
@@ -239,19 +235,14 @@ function Analytics() {
                     </div>
 
                     <div>
-                        <h2>Current Streak</h2>
+                        <h2>Best Streak</h2>
 
                         <strong>
-                            {currentStreak}{" "}
-                            {currentStreak === 1
+                            {bestStreak}{" "}
+                            {bestStreak === 1
                                 ? "Day"
                                 : "Days"}
                         </strong>
-
-                        <p>
-                            Complete 50% or more of your daily tasks
-                            to maintain your streak.
-                        </p>
                     </div>
 
                 </div>
@@ -262,22 +253,6 @@ function Analytics() {
 
                         <div className="streak-motivation-icon">
                             🔥
-                        </div>
-
-                        <div className="streak-stats">
-
-                            <div className="streak-divider"></div>
-
-                            <div className="streak-stat">
-                                <span>Best Streak</span>
-                                <strong>
-                                    {bestStreak}{" "}
-                                    {bestStreak === 1
-                                        ? "Day"
-                                        : "Days"}
-                                </strong>
-                            </div>
-
                         </div>
 
                         <div className="streak-motivation">
@@ -292,65 +267,9 @@ function Analytics() {
 
                         </div>
 
-                    </div>
-
-                </div>
-
-                <div className="analytics-panel productivity-breakdown">
-
-                    <div className="panel-header">
-                        <div>
-                            <h2>Task Performance</h2>
-                            <p>Overall task completion</p>
+                        <div className="streak-motivation-icon">
+                            🔥
                         </div>
-
-                        <strong>
-                            {overallProductivity}%
-                        </strong>
-                    </div>
-
-                    <div className="performance-row">
-
-                        <div>
-                            <span className="performance-label">
-                                Completed
-                            </span>
-
-                            <strong className="performance-value">
-                                {completedTasks}
-                            </strong>
-                        </div>
-
-                        <div>
-                            <span className="performance-label">
-                                Pending
-                            </span>
-
-                            <strong className="performance-value">
-                                {pendingTasks}
-                            </strong>
-                        </div>
-
-                        <div>
-                            <span className="performance-label">
-                                Total
-                            </span>
-
-                            <strong className="performance-value">
-                                {totalTasks}
-                            </strong>
-                        </div>
-
-                    </div>
-
-                    <div className="analytics-progress">
-
-                        <div
-                            className="analytics-progress-fill"
-                            style={{
-                                width: `${overallProductivity}%`,
-                            }}
-                        />
 
                     </div>
 
